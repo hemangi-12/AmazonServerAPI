@@ -1,8 +1,10 @@
 require("dotenv").config();
 const express=require("express");
+const cors=require("cors");
 const app=express();
 const mongoose=require("mongoose");
 require("./db/conn");
+
 
 const cookieParser=require("cookie-parser");
 
@@ -12,7 +14,7 @@ const Products=require("./models/productsSchema");
 const DefaultData=require("./defaultdata");
 const cors=require("cors");
 const router=require("./routes/router");
-const { dirname } = require("path/posix");
+
 
 app.use(express.json());
 app.use(cookieParser(""));
